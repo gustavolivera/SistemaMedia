@@ -1,0 +1,32 @@
+﻿@model NotasModel
+
+<div class="text-center">
+    <h1 class="display-4 mb-4">Calculadora</h1>
+
+
+    <form asp-controller="Notas" asp-action="Calcular">
+        
+        <div>
+        <label>Nota 1</label>
+            <input type="text" name="Nota1" class="form-control" asp-for="Nota1" />
+            <span asp-validation-for="Nota1"></span>
+        </div>
+
+        <div>
+        <label>Nota 2</label>
+            <input type="text" name="Nota2" class="form-control" asp-for="Nota2" />
+            <span asp-validation-for="Nota1"></span>
+        </div>
+
+        <div>
+        <label>Média</label>
+            <input type="text" name="Media" class="form-control" readonly="readonly" asp-for="Media" />
+        </div>
+
+        <div class="mt-4">
+        <button type="submit" class="btn btn-light">Calcular</button>
+        </div>
+
+
+    </form>
+</div>
